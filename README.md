@@ -1,34 +1,53 @@
-# Neetcode 150 - TS & Go
+# 🚀 NeetCode 150 - TS & Go
 
-Consistency tracker for Neetcode 150 problems solved in TypeScript and Golang.
+> Consistent problem-solving in TypeScript and Golang.
 
-## Project Structure
+This repository tracks my journey through the [NeetCode 150](https://neetcode.io/practice), implemented using two different paradigms: the flexibility of **TypeScript** and the performance/simplicity of **Go**.
 
-Each problem is organized within its category folder:
+## 📁 Repository Structure
+
+Problems are categorized by topic and follow a consistent layout:
 
 ```text
-category-name/
-└── problem-name/
-    ├── solution.ts
-    ├── solution.go
-    └── takeaway.md
+📂 [category-name]/
+   └── 📂 [problem-name]/
+       ├── 📄 solution.ts      # TypeScript implementation
+       ├── 📄 solution.go      # Go implementation
+       └── 📄 takeaway.md      # Logic, complexity, and learnings
 ```
 
-## How to Run
+## 🛠️ Tech Stack & Tools
+
+- **TypeScript**: Direct execution via [`tsx`](https://github.com/privatenumber/tsx).
+- **Go**: Native standard library.
+- **Package Manager**: `pnpm`.
+- **Consistency**: Detailed takeaways for every problem.
+
+## 🚀 How to Run
 
 ### TypeScript
-We use `tsx` to run TypeScript files directly without a manual compile step.
 ```bash
-npx tsx <path-to-file>.ts
+# From the problem directory
+npx tsx solution.ts
+
+# From the root (using pnpm)
+pnpm tsx 01-arrays-and-hashing/contains-duplicate/solution.ts
 ```
 
 ### Go
-Run Go files directly using `go run`.
 ```bash
-go run <path-to-file>.go
+# From the problem directory
+go run solution.go
+
+# From the root
+go run 01-arrays-and-hashing/contains-duplicate/solution.go
 ```
 
-## Guidelines
-1. **Consistency**: Solve every problem in both TS and Go.
-2. **Takeaways**: Write down the core logic, time/space complexity, and any new things learned in `takeaway.md`.
-3. **Naming**: Use descriptive names for folders (kabab-case).
+## 📝 Guidelines
+
+1. **Dual Language**: Every problem must be solved in both TS and Go.
+2. **Analysis First**: Complexity ($O(n)$) and logic must be documented in `takeaway.md`.
+3. **Clean Code**: Follow idiomatic patterns for both languages.
+
+---
+*Happy Coding!*
