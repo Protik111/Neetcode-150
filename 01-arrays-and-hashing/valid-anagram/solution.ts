@@ -16,3 +16,4 @@ function isAnagram(s: string, t: string): boolean {
 
 // Test cases
 console.log(isAnagram("anagram", "nagaram"))
+console.log(isAnagram("rat", "car"))
