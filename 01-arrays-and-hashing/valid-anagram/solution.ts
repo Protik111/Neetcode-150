@@ -1,3 +1,5 @@
+// O(n) time complexity
+// O(n) space complexity
 function isAnagram(s: string, t: string): boolean {
     if(s.length !== t.length) return false;
     const count: Record <string, number> = {};
@@ -13,6 +15,15 @@ function isAnagram(s: string, t: string): boolean {
 
     return true;
 };
+
+// O(n log n) time complexity
+// O(n) space complexity
+function isAnagramSorting(s: string, t: string): boolean {
+    if(s.length !== t.length) return false;
+    const sSorted = s.split('').sort().join('');
+    const tSorted = t.split('').sort().join('');
+    return sSorted === tSorted;
+}
 
 // Test cases
 console.log(isAnagram("anagram", "nagaram"))
