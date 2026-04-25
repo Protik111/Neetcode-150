@@ -20,25 +20,23 @@ class Solution {
     let i = 0;
 
     while (i < str.length) {
-      const lengthStart = i + 1; // Skip the '#' character
-      let lengthEnd = lengthStart;
-
-      // Find the end of the length number
-      while (
-        lengthEnd < str.length &&
-        str[lengthEnd] >= "0" &&
-        str[lengthEnd] <= "9"
-      ) {
-        lengthEnd++;
+      // find the separator '#'
+      let j = i;
+      while (str[j] !== "#") {
+        j++;
       }
 
-      const length = parseInt(str.slice(lengthStart, lengthEnd), 10);
-      const stringStart = lengthEnd;
-      const stringEnd = stringStart + length;
+      // length of the string
+      const length = parseInt(str.slice(i, j));
 
-      result.push(str.slice(stringStart, stringEnd));
-      i = stringEnd; // Move to the next encoded string
+      // extract the string
+      const st = str.slice(j + 1, j + 1 + length);
+      result.push(st);
+
+      // move pointer
+      i = j + 1 + length;
     }
+
     return result;
   }
 }
